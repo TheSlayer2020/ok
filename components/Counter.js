@@ -1,8 +1,7 @@
-// components/Counter.js
-
 import React, { useState } from 'react';
 import styles from '../styles/counter.module.css';
-export default function Counter() {
+
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   const increment = () => {
@@ -14,11 +13,18 @@ export default function Counter() {
   };
 
   return (
-    <div className={styles.container}>
-      <h1>Counter</h1>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-    </div>
+    <nav className={styles.buttons}>
+      <h1 className={styles.txt3}> Counter  </h1>
+      <p className={styles.txt2}>
+        Count: {count}
+      </p>
+   
+      <button className={styles.btn1} onClick={increment}>Increment</button>
+      <button className={styles.btn2} onClick={decrement}>Decrement</button>
+    
+    </nav>
   );
-}
+};
+
+export default Counter;
+
